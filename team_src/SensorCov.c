@@ -59,6 +59,13 @@ void SensorCovInit()
 	GpioCtrlRegs.GPAQSEL1.bit.GPIO5 = 0;        //Synch to SYSCLKOUT only
 	GpioCtrlRegs.GPAPUD.bit.GPIO5 = 1; 		//disable pull up
 	GpioDataRegs.GPASET.bit.GPIO5 = 1;
+
+	// Troubleshooting changes for BIM testing - mk
+	GpioCtrlRegs.GPBMUX1.bit.GPIO35 = 0;
+	GpioCtrlRegs.GPBDIR.bit.GPIO35 = 1;
+	GpioCtrlRegs.GPBQSEL1.bit.GPIO35 = 0;
+	GpioCtrlRegs.GPBPUD.bit.GPIO35 = 1;
+	GpioDataRegs.GPBCLEAR.bit.GPIO35 = 1;
 	EDIS;
 
 

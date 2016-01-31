@@ -30,6 +30,7 @@ void BMM_Sleep()
 //
 //	 }
 	 //DELAY_US(10000);
+	GpioDataRegs.GPBTOGGLE.bit.GPIO35 = 1;
 }
 
 void BMM_Wake()
